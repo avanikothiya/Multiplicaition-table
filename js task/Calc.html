@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Calculator</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<form class="center">
+	
+	<div class="container">
+		<div class="text"><label class="style">Calculator</label></div>
+		<div class="left">
+			<input type="text" id="number" class="textbox" name="number" placeholder="eg. 1 + 2" />
+		</div>
+		<div class="right">
+			<input type="button" class="button_style" onClick="calculator()" name="submit_no" value="SUBMIT"/>
+		</div>
+		<div class="answer">
+			<label id="ans">Ans :</label>
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript">
+	function calculator()
+	{
+		
+		var no=document.getElementById("number").value;
+		var res = no.split(" ");
+            switch (res[1]) {
+               case '+': document.getElementById("ans").innerHTML = "Ans : "+(parseInt(res[0])+parseInt(res[2]));
+			   break;
+               case '-': document.getElementById("ans").innerHTML = "Ans : "+(res[0]-res[2]);
+			   break;
+               case '*': document.getElementById("ans").innerHTML = "Ans : "+(res[0]*res[2]);
+			   break;
+               case '/': document.getElementById("ans").innerHTML = "Ans : "+(res[0]/res[2]);
+			   break;
+               case '%': document.getElementById("ans").innerHTML = "Ans : "+(res[0]%res[2]);
+			   break;
+               default: document.getElementById("ans").innerHTML = "Invalid Input"
+            }
+            
+        
+	}
+	
+</script>
+</body>
+</html>

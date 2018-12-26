@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Multiplication Table</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<form class="center">
+	
+	<div class="container">
+		<div class="text"><label class="style">Multiplication Table</label></div>
+		<div class="left">
+			<input type="text" id="number" class="textbox" name="number" placeholder="Enter Number....." />
+		</div>
+		<div class="right">
+			<input type=" button" class="button_style" onclick="multiplicationTable()" name="submit_no" value="SUBMIT"/>
+		</div>
+		<div class="answer">
+			<p id="ans"></p>
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript">
+	function multiplicationTable()
+	{
+		var text=""
+		var no=document.getElementById("number").value;
+		var i;
+		for(i=1;i<=10;i++)
+		{
+			text=text+no+" * "+i+" = "+no*i+"<br>"
+			
+			//document.write(no+" * "+i+" = "+no*i)
+			//document.write("<br>")
+		}
+		document.getElementById("ans").innerHTML = text
+	}
+	
+</script>
+</body>
+</html>
